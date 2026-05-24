@@ -1,0 +1,52 @@
+name: Tool submission
+description: Suggest a browser-based tool for the list
+title: "Add: <tool name>"
+labels: [tool-submission]
+body:
+  - type: input
+    id: tool-name
+    attributes:
+      label: Tool name
+      placeholder: Example Tool
+    validations:
+      required: true
+  - type: input
+    id: tool-url
+    attributes:
+      label: Tool URL
+      placeholder: https://example.com/
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Best category
+      options:
+        - Image and Media Tools
+        - Developer Utilities
+        - Design and Creative Tools
+        - Writing and Documentation
+        - Data, Security, and Diagnostics
+        - Tool Directories and Discovery
+        - Other / not sure
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Short description
+      description: One factual sentence explaining what the tool does.
+      placeholder: Converts images locally in the browser without upload.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: The tool works from a browser.
+          required: true
+        - label: The URL uses HTTPS.
+          required: true
+        - label: I checked that it is not already listed.
+          required: true
